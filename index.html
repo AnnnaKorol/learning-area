@@ -52,7 +52,7 @@
             split: false,
             albums: [{name:"Bez mezh", released: 2016}, {name:"Gloria",released: 2016}, {name:"Tam, de nas nema",released:1998}],
             bio() {
-            const firstAlbum = this.albums[this.albums.length -1]; //Retrieve the first album: The first album in your albums list is the last one in the array (this.albums.length - 1), so we extract its name and release date.
+            const firstAlbum = this.albums[this.albums.length -1]; // can be albums.slice(-1) or albums.at(-1) //Retrieve the first album: The first album in your albums list is the last one in the array (this.albums.length - 1), so we extract its name and release date.
             return `${this.name} is a ${this.nationality} ${this.genre} band, formed in ${this.formed}. Their first album, "${firstAlbum.name}" , was released in ${firstAlbum.released}.`;
             }
           };
