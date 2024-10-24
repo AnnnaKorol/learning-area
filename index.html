@@ -18,6 +18,9 @@
     </p>
 
     <script>
+
+
+
       const person = {
         name: ["Bob", "Smith"],
         age: 32,
@@ -68,29 +71,109 @@
         },
       };
 
-      const cat2 = {
-        name: "Fly",
-        breed: "Toyger",
-        color: "black-orange",
-        greeting: function () {
-          console.log(`Hello, said ${this.name} the ${this.breed}`);
-        },
-      };
+    //   const cat2 = {
+    //     name: "Fly",
+    //     breed: "Toyger",
+    //     color: "black-orange",
+    //     greeting: function () {
+    //       console.log(`Hello, said ${this.name} the ${this.breed}`);
+    //     },
+    //   };
 
-      cat.greeting();
-      cat2.greeting();
+    //   cat.greeting();
+    //   cat2.greeting();
+
+
+//-------------------------------------------------------------------------------------------------
+
+      function Cat(name, breed) {
+        this.name = name;
+        this.breed = breed;
+        this.greeting = function () {
+          console.log(`Hello, said ${this.name} the ${this.breed}.`);
+        };
+      }
+
+const bertie = new Cat("Bertie", "Cymric");
+bertie.greeting();
+
+const fly = new Cat("Fly", "Toyger");
+fly.greeting();
+
+    //   Cat.greeting("Bertie", "Cymric");
+    //   Cat.greeting("Fly", "Toyger");
+
+
+//-------------------------------------------------------------------------------------------------
+
+//  const person = {
+//     name: ["Bob", "Smith"],
+//     age: 32,
+//     bio() {
+//       console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+//     },
+//     introduceSelf() {
+//       console.log(`Hi! I'm ${this.name[0]}.`);
+//     },
+//   };
+
+
+//-------------------------------------------------------------------------------------------------
+
+
+
+//Rewrite the sumOfTripledEvens(array) function using: map, filter, map, reduce methods. 
+
+// const arr = [1, 2, 3, 4, 5];
+
+// function sumOfTripledEvens(array) {
+//   let sum = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     // Step 1: If the element is an even number
+//     if (array[i] % 2 === 0) {
+//       // Step 2: Multiply this number by three
+//       const tripleEvenNumber = array[i] * 3;
+
+//       // Step 3: Add the new number to the total
+//       sum += tripleEvenNumber;
+//     }
+//   }
+//   return sum;
+// }
+
+const arr = [1, 2, 3, 4, 5];
+
+function mapSumOfTripledEvens (arr) {
+return arr
+.filter((num) => num % 2 ===0)
+.map((num) => (num * 3))
+.reduce((total, num) => total * num, 1);
+}
+
+console.log(mapSumOfTripledEvens(arr)); //  72
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
   </body>
 </html>
 
-<!-- const person = {
-    name: ["Bob", "Smith"],
-    age: 32,
-    bio() {
-      console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
-    },
-    introduceSelf() {
-      console.log(`Hi! I'm ${this.name[0]}.`);
-    },
-  };
-   -->
+
+
+
+
